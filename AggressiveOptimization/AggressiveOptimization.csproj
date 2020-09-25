@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>0.0.1</Version>
+    <Version>0.1.0</Version>
     <Authors>acple</Authors>
     <Description>Fody add-in that disables Quick JIT for all your methods</Description>
     <Copyright>(c) 2020 acple</Copyright>
