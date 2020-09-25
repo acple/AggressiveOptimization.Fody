@@ -1,0 +1,43 @@
+version: 2.1
+
+executors:
+  dotnet:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:5.0-alpine
+    working_directory: /project
+
+jobs:
+  pack_and_push:
+    executor: dotnet
+    steps:
+      - checkout
+      - run:
+          name: info
+          command: dotnet --info
+      - run:
+          name: build
+          command: dotnet build -c Release --no-incremental -v normal
+      - run:
+          name: pack
+          command: >-
+            dotnet pack -c Release --no-build -v normal AggressiveOptimization
+            --output ./nuget
+            -p:RepositoryBranch=${CIRCLE_BRANCH},RepositoryCommit=${CIRCLE_SHA1}
+      - store_artifacts:
+          path: ./nuget
+      - run:
+          name: push
+          command: >-
+            dotnet nuget push ./nuget/AggressiveOptimization.Fody.*.nupkg
+            -s https://www.nuget.org -k ${NUGET_APIKEY}
+
+workflows:
+  automatic_deploy:
+    jobs:
+      - pack_and_push:
+          context: nuget-publish
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v\d+\.\d+\.\d+(-.+)?$/

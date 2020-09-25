@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30516.212
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AggressiveOptimization", "AggressiveOptimization\AggressiveOptimization.csproj", "{22703340-55CB-4FC2-9BCB-69A899B12544}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4D99DCFE-5E3F-42B0-9670-2029E75D914E} = {4D99DCFE-5E3F-42B0-9670-2029E75D914E}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AggressiveOptimization.Fody", "AggressiveOptimization.Fody\AggressiveOptimization.Fody.csproj", "{4D99DCFE-5E3F-42B0-9670-2029E75D914E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FDD185EE-B263-4B7F-9DF9-3C733185F9E5}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".circleci", ".circleci", "{007690DB-CF98-48A5-8B6C-75E7A0BCE8ED}"
+	ProjectSection(SolutionItems) = preProject
+		.circleci\config.yml = .circleci\config.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22703340-55CB-4FC2-9BCB-69A899B12544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22703340-55CB-4FC2-9BCB-69A899B12544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22703340-55CB-4FC2-9BCB-69A899B12544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22703340-55CB-4FC2-9BCB-69A899B12544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D99DCFE-5E3F-42B0-9670-2029E75D914E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D99DCFE-5E3F-42B0-9670-2029E75D914E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D99DCFE-5E3F-42B0-9670-2029E75D914E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D99DCFE-5E3F-42B0-9670-2029E75D914E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{007690DB-CF98-48A5-8B6C-75E7A0BCE8ED} = {FDD185EE-B263-4B7F-9DF9-3C733185F9E5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16EE0E1C-BD92-4B4E-820E-2E62AADA2647}
+	EndGlobalSection
+EndGlobal
